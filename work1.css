@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: 0.5s;
+}
+button {
+    cursor: pointer;
+}
+#grid {
+    display: grid;
+}
+nav {
+    background-color: rgba(230, 230, 230, 0.5);
+    width: 100%;
+    height: 100px;
+    padding: 15px 40px 15px 40px;
+    position: fixed;
+}
+nav > div {
+    text-align: center;
+    margin-top: -7%;
+    padding: 50px 0 50px 0;
+    cursor: pointer;
+}
+nav > img:last-child {
+    cursor: pointer;
+    float: right;
+    margin-top: -5%;
+}
+.div1 {
+    width: 100%;
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 50px 150px 50px 150px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+}
+.div1 > div:first-child > h1 {
+    font-size: 54px;
+    color: rgba(41, 120, 83, 0.98);
+}
+.div1 > div:first-child > button {
+    color: white;
+    background-color: rgba(41, 120, 83, 0.98);
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: 600;
+}
+.div1 > div:last-child {
+    background: url(work1/3_1-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#h1-1 {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#h1-1 > span,
+#h1-2 > span {
+    color: rgba(41, 120, 83, 0.98);
+}
+.div2 {
+    width: 100%;
+    padding: 0 150px 0 150px;
+    margin-bottom: 50px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+.div2 > div {
+    height: 370px;
+    border-radius: 35px;
+    padding: 45px 10px 10px 65px;
+}
+.div2 > div > h1 {
+    font-size: xx-large;
+}
+.div2 > div > p {
+    font-size: large;
+}
+.div2 > div:first-child > p {
+    margin: 0 200px 0px 0px;
+}
+.div2 > div:first-child {
+    background-color: rgba(41, 120, 83, 0.98);
+    color: white;
+}
+.div2 > div:first-child > button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgba(41, 120, 83, 0.98);
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: 600;
+}
+.div2 > div:first-child > img {
+    margin-right: -10px;
+    margin-top: -250px;
+    float: right;
+}
+.div2 > div:last-child {
+    background-color: rgba(230, 230, 230, 0.5);
+    border: 1px solid black;
+}
+.div2 > div:last-child > button {
+    color: white;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(41, 120, 83, 0.98);
+    border: none;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: 600;
+}
+.div3 {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    height: 370px;
+    border-radius: 35px;
+    padding: 45px 10px 10px 65px;
+    background-color: rgba(230, 230, 230, 0.5);
+    border: 1px solid black;
+}
+.div3 > h1 {
+    font-size: xx-large;
+}
+.div3 > p {
+    font-size: large;
+    margin: 0 500px 0px 0px;
+}
+.div3 > button {
+    color: white;
+    width: 250px;
+    height: 50px;
+    background-color: rgba(41, 120, 83, 0.98);
+    border: none;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: 600;
+}
+.div3 > img {
+    border: 20px dotted rgba(128, 128, 128, 0.5);
+    width: 300px;
+    height: 300px;
+    float: right;
+    margin-top: -240px;
+    margin-right: 100px;
+}
+#p1-1 {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.grid1 {
+    width: 100%;
+    height: 500px;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 150px 0 150px;
+    margin-bottom: 50px;
+}
+.grid1 > div {
+    padding: 30px 30px 0 30px;
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    grid-template-rows: 1fr 2fr;
+}
+.grid1 > div > div {
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+.grid1 > div > div > img {
+    width: 90px;
+    height: 90px;
+    margin-top: -25px;
+}
+.grid1 > div > div > div > hr {
+    width: 90px;
+    height: 5px;
+    margin-top: 5px;
+    border: none;
+    background-image: linear-gradient(to right, rgba(41, 120, 83, 0.98), rgba(41, 120, 83, 0.98));
+}
+.grid1 > div > p {
+    font-size: large;
+}
+.div4 {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    align-items: center;
+    padding: 50px 150px 25px 150px;
+    background-color: rgba(230, 230, 230, 0.5);
+}
+.div4 > img:first-child {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.div4 > hr, .div6 > hr {
+    width: 500px;
+    height: 3px;
+    border: none;
+    background-image: linear-gradient(to right, rgba(41, 120, 83, 0.98), rgba(41, 120, 83, 0.98));
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.div4 > p, b {
+    font-size: x-large;
+}
+.div4 > p {
+    font-size: x-large;
+    padding: 25px 0 25px 0;
+}
+.div4 > b > u {
+    color: rgba(41, 120, 83, 0.98);
+}
+.div4 > img:last-child {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+.div5 {
+    width: 100%;
+    height: 706px;
+    padding: 10px 0 10px 150px;
+    grid-template-columns: 1fr 1.5fr;
+}
+.div5 > div:first-child {
+    padding: 30px 0 0 0;
+}
+.div5 > div:first-child > hr {
+    width: 200px;
+    height: 5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.div5 > div:first-child > p {
+    font-size: larger;
+    font-weight: 500;
+}
+#carousel {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    border-radius: 25px;
+    padding: 25px 25px 10px 25px;
+    background-color: yellow;
+}
+.slide {
+    display: none;
+}
+.slide > label {
+    font-size: larger;
+}
+.slide > input {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.slide > input::placeholder {
+    font-size: medium;
+    padding: 20px;
+    color: rgba(128, 128, 128, 0.6);
+}
+#controls {
+    position: absolute;
+    bottom: 50px;
+}
+#controls > button {
+    color: white;
+    width: 175px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 400;
+}
+#prevBtn {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+#nextBtn {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+}
+.indicator {
+    width: 50px;
+    height: 3px;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 5px;
+}
+.div5 > div:last-child {
+    width: 686px;
+    height: 686px;
+    background: url(work1/1\ 2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.div6 {
+    width: 100%;
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 50px 150px 50px 150px;
+}
+.grid2 {
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid2 > div {
+    text-align: center;
+    align-items: center;
+}
+.grid2 > div > p {
+    font-size: medium;
+    font-weight: 600;
+}
+.main-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+.main-form > div {
+    width: 584px;
+    height: 584px;
+}
+.main-form > div:first-child {
+    background: url(work1/2\ 14.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-form > div:last-child {
+    padding-top: 25px;
+}
+#h1-2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+.main-form > div:last-child > form > input {
+    width: 90%;
+    height: 50px;
+    font-size: large;
+    background-color: rgba(230, 230, 230, 0.0);
+    margin-bottom: 50px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightgray;
+}
+.main-form > div:last-child > form > input:focus {
+    border-bottom: 2px solid darkgray;
+}
+.main-form > div:last-child > form > button {
+    color: white;
+    width: 300px;
+    height: 60px;
+    background-color: rgba(41, 120, 83, 0.98);
+    border: none;
+    border-radius: 35px;
+    font-size: large;
+    font-weight: 600;
+}
+.main-form > div:last-child > p {
+    font-weight: 550;
+}
+.div7 {
+    padding: 20px 150px 20px 150px;
+    text-align: center;
+    align-items: center;
+}
+.div7 > hr {
+    width: 500px;
+    height: 3px;
+    border: none;
+    background-image: linear-gradient(to right, rgba(41, 120, 83, 0.98), rgba(41, 120, 83, 0.98));
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 50px;
+}
+.div7 > details {
+    width: 70%;
+    margin: 3px auto;
+    padding: 20px;
+    background-color: rgba(230, 230, 230, 0.5);
+    font-size: x-large;
+    font-weight: 800;
+    text-align: left;
+    
+    overflow: hidden;
+}
+.div7 > details > summary {
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+}
+.div7 > details > summary::after {
+    content: "+";
+    float: right;
+    font-size: xx-large;
+    font-weight: 400;
+    color: rgba(41, 120, 83, 0.98);
+}
+.div7 > details[open] > summary::after {
+    content: "x";
+}
+.div7 > details[open] > p {
+    animation: fadein 0.5s ease;
+}
+.div7 > details > p {
+    font-size: medium;
+    font-weight: 400;
+}
+.div8 {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(230, 230, 230, 0.5);
+    text-align: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+.div8 > button {
+    color: white;
+    width: 300px;
+    height: 60px;
+    background-color: rgba(41, 120, 83, 0.98);
+    border: none;
+    border-radius: 35px;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.div8 > hr {
+    width: 80%;
+    height: 2.5px;
+    position: relative;
+    left: 50%;
+    bottom: -17%;
+    transform: translate(-50%);
+    background-image: linear-gradient(to right, black, black);
+}
+footer {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+footer > h3 {
+    color: gray;
+    font-size: medium;
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+footer > u {
+    font-size: medium;
+    font-weight: 500;
+}
