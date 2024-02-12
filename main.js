@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (index < 4) {
             prevBtn.textContent = 'Назад';
-            nextBtn.textContent = 'Вперёд';
+            nextBtn.textContent = 'Далее';
         } else {
             prevBtn.textContent = 'Оставить заявку';
             nextBtn.textContent = 'Посчитать заново';
