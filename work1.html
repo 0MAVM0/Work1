@@ -225,7 +225,7 @@
                     <label for="сумма">1. Укажите сумму проводки?</label>
                     <br>
                     <br>
-                    <input type="number" name="сумма" id="" placeholder="Сумма в рублях">
+                    <input type="number" name="сумма" id="sumInput" placeholder="Сумма в рублях">
                 </div>
                 <div class="slide">
                     <p>2. Списание за какой квартал интересует?</p>
@@ -249,12 +249,12 @@
                     <br>
                     <form>
                         <label class="radio-label">
-                            <input type="radio" name="option" value="option1" checked>
+                            <input type="radio" name="vat" value="20" checked>
                             <span>20%</span>
                         </label>
                         <br>
                         <label class="radio-label">
-                            <input type="radio" name="option" value="option2">
+                            <input type="radio" name="vat" value="10">
                             <span>10%</span>
                         </label>
                     </form>
@@ -265,22 +265,23 @@
                     <br>
                     <form>
                         <label class="radio-label">
-                            <input type="radio" name="option" value="option1">
+                            <input type="radio" name="promo" value="yes">
                             <span>Да</span>
                         </label>
                         <br>
                         <label class="radio-label">
-                            <input type="radio" name="option" value="option2" checked>
+                            <input type="radio" name="promo" value="no" checked>
                             <span>Нет</span>
                         </label>
                     </form>
                 </div>
                 <div class="slide">
                     <h1>Slide 5</h1>
+                    <p id="result"></p> <!-- ================================= -->
                 </div>
                 <div id="controls">
                     <button id="prevBtn">Назад</button>
-                    <button id="nextBtn">Далее</button>
+                    <button id="nextBtn">Посчитать заново</button>
                 </div>
                 <div id="indicators">
                     <div class="indicator"></div>
@@ -288,7 +289,7 @@
                     <div class="indicator"></div>
                     <div class="indicator"></div>
                 </div>
-            </div>
+            </div>            
         </div>
         <div></div>
     </div>

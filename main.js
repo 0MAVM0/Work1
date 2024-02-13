@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const resultParagraph = document.getElementById('result');
     let currentSlide = 0;
 
     function showSlide(index) {
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         updateIndicators(index);
         updateButtons(index);
+        if (index === 4) {
+            calculateResult();
+        }
     }
 
     function updateIndicators(index) {
@@ -33,12 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             prevBtn.style.display = 'inline-block';
         }
-        if (index < 3) {
+        if (index < 4) {
             prevBtn.textContent = 'Назад';
             nextBtn.textContent = 'Далее';
-        } else if (index < 4) {
-            prevBtn.textContent = 'Назад';
-            nextBtn.textContent = 'Рассчитать';
         } else {
             prevBtn.textContent = 'Оставить заявку';
             nextBtn.textContent = 'Посчитать заново';
@@ -48,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
     prevBtn.addEventListener('click', function () {
         if (currentSlide > 0) {
             currentSlide--;
+            showSlide(currentSlide);
+        } else if (currentSlide === 0) {
+            currentSlide = 4;
             showSlide(currentSlide);
         }
     });
@@ -61,6 +65,39 @@ document.addEventListener('DOMContentLoaded', function () {
             showSlide(currentSlide);
         }
     });
+
+    function calculateResult() {
+        const sum = parseFloat(document.getElementById('sumInput').value);
+        const vatRate = parseInt(document.querySelector('input[name="vat"]:checked').value);
+        const promo = document.querySelector('input[name="promo"]:checked').value;
+
+        let vatSize = sum / 6;
+        let discount = 0;
+
+        if (promo === 'yes') {
+            discount = 0.05;
+        }
+
+        let serviceFee = 0;
+        if (sum <= 1000000) {
+            serviceFee = sum * (2.5 / 100);
+        } else if (sum <= 5000000) {
+            serviceFee = sum * (2 / 100);
+        } else if (sum <= 10000000) {
+            serviceFee = sum * (1.5 / 100);
+        } else if (sum <= 50000000) {
+            serviceFee = sum * (1 / 100);
+        } else {
+            serviceFee = sum * (0.8 / 100);
+        }
+
+        let totalAmount = sum + vatSize - discount - serviceFee;
+
+        resultParagraph.textContent = `Сумма НДС: ${vatSize.toFixed(2)} руб. 
+            \nСтоимость услуг: ${serviceFee.toFixed(2)} руб. 
+            \nСкидка: ${discount * 100}% 
+            \nИтоговая сумма: ${totalAmount.toFixed(2)} руб.`;
+    }
 
     showSlide(currentSlide);
 });
