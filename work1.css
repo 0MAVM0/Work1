@@ -27,7 +27,7 @@ nav > div {
 nav > img:last-child {
     cursor: pointer;
     float: right;
-    margin-top: -5%;
+    margin-top: -6%;
 }
 .div1 {
     width: 100%;
@@ -250,8 +250,8 @@ nav > img:last-child {
 }
 #carousel {
     position: relative;
-    width: 80%;
-    height: 300px;
+    width: 90%;
+    height: 250px;
     border-radius: 25px;
     padding: 25px 25px 10px 25px;
     background-color: yellow;
@@ -259,7 +259,8 @@ nav > img:last-child {
 .slide {
     display: none;
 }
-.slide > label {
+.slide > label,
+.slide > p {
     font-size: larger;
 }
 .slide > input {
@@ -272,6 +273,37 @@ nav > img:last-child {
     font-size: medium;
     padding: 20px;
     color: rgba(128, 128, 128, 0.6);
+}
+.slide > form > label > input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border-radius: 50%;
+    border: 2px solid red;
+    position: relative;
+    cursor: pointer;
+}
+.slide > form > label > input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide > form > label > input[type="radio"]:checked::before {
+    background-color: red;
+}
+
+.slide > form > label > span {
+    font-size: larger;
 }
 #controls {
     position: absolute;
@@ -295,7 +327,7 @@ nav > img:last-child {
 #indicators {
     position: absolute;
     bottom: 20px;
-    left: 20%;
+    left: 5%;
 }
 .indicator {
     width: 50px;

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     let currentSlide = 0;
-  
+
     function showSlide(index) {
         slides.forEach((slide, i) => {
             if (i === index) {
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateIndicators(index) {
-      indicators.forEach((indicator, i) => {
-            if (i === index) {
-                indicator.style.backgroundColor = 'black';
+        indicators.forEach((indicator, i) => {
+            if (i <= index) {
+                indicator.style.backgroundColor = 'red';
             } else {
                 indicator.style.backgroundColor = '#ccc';
             }
@@ -33,15 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             prevBtn.style.display = 'inline-block';
         }
-        if (index < 4) {
+        if (index < 3) {
             prevBtn.textContent = 'Назад';
             nextBtn.textContent = 'Далее';
+        } else if (index < 4) {
+            prevBtn.textContent = 'Назад';
+            nextBtn.textContent = 'Рассчитать';
         } else {
             prevBtn.textContent = 'Оставить заявку';
             nextBtn.textContent = 'Посчитать заново';
         }
     }
-        prevBtn.addEventListener('click', function () {
+
+    prevBtn.addEventListener('click', function () {
         if (currentSlide > 0) {
             currentSlide--;
             showSlide(currentSlide);
