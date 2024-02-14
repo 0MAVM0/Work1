@@ -103,8 +103,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.getElementById('submit-btn').addEventListener('click', function(event) {
     event.preventDefault();
+
     var form = document.getElementById('promo-form');
     var container = document.getElementById('promo-container');
+
+    if (!form.checkValidity()) {
+      return;
+    }
+
     form.style.display = 'none';
     container.style.display = 'block';
 });
