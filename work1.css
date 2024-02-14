@@ -460,7 +460,6 @@ nav > img:last-child {
     font-size: x-large;
     font-weight: 800;
     text-align: left;
-    
     overflow: hidden;
 }
 .div7 > details > summary {
@@ -529,4 +528,25 @@ footer > h3 {
 footer > u {
     font-size: medium;
     font-weight: 500;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+    /* Your styles for screens up to 1200px width */
+}
+
+@media only screen and (max-width: 992px) {
+    /* Your styles for screens up to 992px width */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Your styles for screens up to 768px width */
+}
+
+@media only screen and (max-width: 576px) {
+    /* Your styles for screens up to 576px width */
+}
+
+@media only screen and (max-width: 480px) {
+    /* Your styles for screens up to 480px width */
 }
