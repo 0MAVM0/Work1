@@ -12,6 +12,7 @@ button {
     display: grid;
 }
 nav {
+    z-index: 100;
     background-color: rgb(230, 230, 230);
     width: 100%;
     height: 100px;
@@ -529,8 +530,6 @@ footer > u {
     font-size: medium;
     font-weight: 500;
 }
-/* Media Queries */
-
 @media only screen and (max-width: 1200px) {
     /* Your styles for screens up to 1200px width */
 }
