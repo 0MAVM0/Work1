@@ -100,6 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     showSlide(currentSlide);
+
+    var form = document.getElementById('promo-form');
+    form.addEventListener('submit', formSend)
+
+    async function formSend(e) {
+        e.preventDefault();
+
+
+    }
 });
 document.getElementById('submit-btn').addEventListener('click', function(event) {
     event.preventDefault();
@@ -121,3 +130,22 @@ var maskOptions = {
     lazy: false
 }
 var mask = new IMask(element, maskOptions);
+
+document.getElementById('submit-btn').addEventListener('click', function() {
+    event.preventDefault();
+
+    var formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+        .then(function(response) {
+            console.log('Письмо успешно отправлено!', response.status, response.text);
+            alert('Письмо успешно отправлено!');
+        }, function(error) {
+            console.log('Письмо не удалось отправить!', error);
+            alert('Письмо не удалось отправить!');
+        });
+});

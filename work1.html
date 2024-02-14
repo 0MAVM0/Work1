@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="work1.css">
     <title>ТУТ НЕТ НДС</title>
@@ -363,10 +364,10 @@
                     промокод на скидку в 10%
                 </h1>
                 <form id="promo-form" action="#" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required><br>
-                    <input type="email" name="email" placeholder="Ваш емайл" required><br>
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" required><br>
+                    <input type="email" name="email" id="email" placeholder="Ваш емайл" required><br>
                     <input type="text" name="phone" id="phone" placeholder="+7(000)000-00-00" required>
-                    <button id="submit-btn">Получить промокод</button>
+                    <button type="button" id="submit-btn">Получить промокод</button>
                 </form>
                 <div id="promo-container">
                     <p>Ваш промокод <b>НЕТНДС</b></p>
