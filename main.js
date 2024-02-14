@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtons(index);
         if (index === 4) {
             calculateResult();
+            addPromoInputChangeListener();
         }
     }
 
@@ -70,12 +71,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const sum = parseFloat(document.getElementById('sumInput').value);
         const vatRate = parseInt(document.querySelector('input[name="vat"]:checked').value);
         const promo = document.querySelector('input[name="promo"]:checked').value;
+        const promoInputValue = document.getElementById('promo-input').value.trim();
 
         let vatSize = sum / 6;
         let discount = 0;
 
-        if (promo === 'yes') {
-            discount = 0.05;
+        if (promo === 'no') {
+            discount = 0;
+        } else if (promo === 'yes' && promoInputValue === 'НЕТНДС') {
+            discount = 0.10;
         }
 
         let serviceFee = 0;
@@ -91,25 +95,42 @@ document.addEventListener('DOMContentLoaded', function () {
             serviceFee = sum * (0.8 / 100);
         }
 
-        let totalAmount = sum + vatSize - discount - serviceFee;
+        let totalAmount = sum + vatSize - (sum * discount) - serviceFee;
 
         resultParagraph.innerHTML = `<p>Сумма НДС: <span>${vatSize.toFixed(2)} руб.</span></p>
-                            <p>Стоимость услуг: <span>${serviceFee.toFixed(2)} руб.</span></p>
-                            <p>Скидка: <span>${discount * 100}%</span></p>
-                            <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</p></span>`;
+                                <p>Стоимость услуг: <span>${serviceFee.toFixed(2)} руб.</span></p>
+                                <p>Скидка: <span>${(discount * 100).toFixed(2)}%</span></p>
+                                <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</p></span>`;
     }
+
 
     showSlide(currentSlide);
 
-    var form = document.getElementById('promo-form');
-    form.addEventListener('submit', formSend)
-
-    async function formSend(e) {
-        e.preventDefault();
-
-
+    function addPromoInputChangeListener() {
+        const promoInput = document.getElementById('promo-input');
+        promoInput.addEventListener('input', function () {
+            calculateResult();
+        });
     }
+
+    const promoRadioYes = document.querySelector('input[value="yes"]');
+    const promoRadioNo = document.querySelector('input[value="no"]');
+    const promoInput = document.getElementById('promo-input');
+
+    function togglePromoInputVisibility() {
+        if (promoRadioYes.checked) {
+            promoInput.style.display = 'inline-block';
+        } else {
+            promoInput.style.display = 'none';
+        }
+    }
+
+    promoRadioYes.addEventListener('change', togglePromoInputVisibility);
+    promoRadioNo.addEventListener('change', togglePromoInputVisibility);
+
+    togglePromoInputVisibility();
 });
+
 document.getElementById('submit-btn').addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -143,9 +164,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
         .then(function(response) {
             console.log('Письмо успешно отправлено!', response.status, response.text);
-            alert('Письмо успешно отправлено!');
         }, function(error) {
             console.log('Письмо не удалось отправить!', error);
-            alert('Письмо не удалось отправить!');
         });
 });

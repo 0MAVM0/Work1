@@ -273,6 +273,8 @@ nav > img:last-child {
     font-size: larger;
 }
 .slide > input {
+    padding: 15px;
+    font-size: larger;
     width: 80%;
     height: 50px;
     border: none;
@@ -312,6 +314,16 @@ nav > img:last-child {
 }
 .slide > form > label > span {
     font-size: larger;
+}
+.slide > form > label > input[type="text"] {
+    /* display: none; */
+    margin-left: 60px;
+    width: 70%;
+    height: 50px;
+    padding: 15px;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
 }
 .slide:nth-child(5) > p > p {
     margin: 5px 0 5px 0;
