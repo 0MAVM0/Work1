@@ -11,7 +11,7 @@
     <nav>
         <img src="work1/лого 1.png" width="75px" height="75px" alt="logo">
         <div>
-            <pre>Услуги            Стоимость           Схема работы</pre>
+            <pre><a href="#section1">Услуги</a>            <a href="#section2">Стоимость</a>           <a href="#section3">Схема работы</a></pre>
         </div>
         <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" width="55px" height="55px" alt="telegram">
     </nav>
@@ -39,7 +39,7 @@
         </div>
         <div></div>
     </div>
-    <h1 id="h1-1">Наши услуги</h1>
+    <h1  id="section1" class="h1-1">Наши услуги</h1>
     <div class="div2" id="grid">
         <div>
             <h1>
@@ -86,7 +86,7 @@
         <button>Заказать &rarr;</button>
         <img src="work1/22 1.png" alt="list">
     </div>
-    <h1 id="h1-1">
+    <h1 class="h1-1">
         Наши <span>преимущества</span>
     </h1>
     <p id="p1-1">Во-первых, мы быстро и качественно выполняем свою работу</p>
@@ -188,7 +188,7 @@
         <br>
         <br>
         <br>
-        <h1 id="h1-1">
+        <h1 class="h1-1">
             Главная <span>наша особенность</span>
         </h1>
         <hr>
@@ -207,8 +207,8 @@
         <img src="work1/Group 3.png" alt="screen2">
     </div>
     <div class="div5" id="grid">
-        <div>
-            <h1 id="h1-2">
+        <div id="section2">
+            <h1 class="h1-2">
                 <span>Рассчитайте</span> стоимость<br>
                 наших услуг <span>онлайн</span>
             </h1>
@@ -293,7 +293,7 @@
         <div></div>
     </div>
     <div class="div6">
-        <h1 id="h1-1">
+        <h1 class="h1-1"  id="section3">
             Порядок <span>работы</span> по шагам
         </h1>
         <hr>
@@ -303,7 +303,7 @@
         <div class="grid2" id="grid">
             <div>
                 <img src="https://static.tildacdn.com/tild6532-6561-4637-b731-306434616538/1interface_open-in-b.svg" width="140px" height="140px">
-                <h1 id="h1-1">
+                <h1 class="h1-1">
                     <span>1</span>
                 </h1>
                 <h2 style="margin-top: -10px;">
@@ -315,7 +315,7 @@
                 </p>
             </div>
             <div>
-                <h1 id="h1-1" style="margin-top: 40px;">
+                <h1 class="h1-1" style="margin-top: 40px;">
                     <span>2</span>
                 </h1>
                 <h2 style="margin-top: -10px;">
@@ -329,7 +329,7 @@
             </div>
             <div>
                 <img src="https://static.tildacdn.com/tild3436-3666-4939-b833-383331346165/3files-and-data_docu.svg" width="140px" height="140px">
-                <h1 id="h1-1">
+                <h1 class="h1-1">
                     <span>3</span>
                 </h1>
                 <h2 style="margin-top: -10px;">
@@ -341,7 +341,7 @@
                 </p>
             </div>
             <div>
-                <h1 id="h1-1" style="margin-top: 40px;">
+                <h1 class="h1-1" style="margin-top: 40px;">
                     <span>4</span>
                 </h1>
                 <h2 style="margin-top: -10px;">
@@ -358,16 +358,19 @@
         <div class="main-form" id="grid">
             <div></div>
             <div>
-                <h1 id="h1-2">
+                <h1 class="h1-2">
                     Оставьте заявку и получите<br>
                     промокод на скидку в 10%
                 </h1>
-                <form action="#"  method="POST">
+                <form id="promo-form" action="#" method="POST">
                     <input type="text" placeholder="Ваше имя"><br>
-                    <input type="text" placeholder="Ваш емайл"><br>
+                    <input type="email" placeholder="Ваш емайл"><br>
                     <input type="text" name="phone" id="phone" placeholder="+7(000)000-00-00">
-                    <button>TUT-NET-NDS</button>
+                    <button id="submit-btn">TUT-NET-NDS</button>
                 </form>
+                <div id="promo-container">
+                    <p>Ваш промокод <b>НЕТНДС</b></p>
+                </div>
                 <br>
                 <p>
                     Заполняя поля, я прочитал <a href="#">политику конфиденциальности</a> и даю<br>
@@ -377,7 +380,7 @@
         </div>
     </div>
     <div class="div7">
-        <h1 id="h1-1">
+        <h1 class="h1-1">
             Некоторые <span>ответы</span> на вопросы
         </h1>
         <hr>
@@ -427,7 +430,7 @@
         </details>
     </div>
     <div class="div8">
-        <h1 id="h1-1">
+        <h1 class="h1-1">
             Все еще остались сомнения?<br>
             Давайте поговорим!
         </h1>

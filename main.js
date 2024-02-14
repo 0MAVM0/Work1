@@ -101,6 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlide(currentSlide);
 });
+document.getElementById('submit-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    var form = document.getElementById('promo-form');
+    var container = document.getElementById('promo-container');
+    form.style.display = 'none';
+    container.style.display = 'block';
+});
 
 var element = document.getElementById('phone');
 var maskOptions = {
