@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const resultParagraph = document.getElementById('result');
-    const loader = document.querySelector('.loader');
     let currentSlide = 0;
 
     function showSlide(index) {
@@ -18,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateIndicators(index);
         updateButtons(index);
         if (index === 4) {
-            loader.classList.add('active');
-            setTimeout(calculateResult, 3000);
+            calculateResult();
         }
     }
 
@@ -69,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function calculateResult() {
-        loader.classList.remove('active');
         const sum = parseFloat(document.getElementById('sumInput').value);
         const vatRate = parseInt(document.querySelector('input[name="vat"]:checked').value);
         const promo = document.querySelector('input[name="promo"]:checked').value;
@@ -78,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let discount = 0;
 
         if (promo === 'yes') {
-            discount = 0.05; 
+            discount = 0.05;
         }
 
         let serviceFee = 0;
@@ -96,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let totalAmount = sum + vatSize - discount - serviceFee;
 
-        resultParagraph.innerHTML = `<p>Сумма НДС: ${vatSize.toFixed(2)} руб.</p>
-                            <p>Стоимость услуг: ${serviceFee.toFixed(2)} руб.</p>
-                            <p>Скидка: ${discount * 100}%</p>
-                            <p>Итоговая сумма: ${totalAmount.toFixed(2)} руб.</p>`;
+        resultParagraph.innerHTML = `<p>Сумма НДС: <span>${vatSize.toFixed(2)} руб.</span></p>
+                            <p>Стоимость услуг: <span>${serviceFee.toFixed(2)} руб.</span></p>
+                            <p>Скидка: <span>${discount * 100}%</span></p>
+                            <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</p></span>`;
     }
 
     showSlide(currentSlide);
