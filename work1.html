@@ -10,15 +10,40 @@
 </head>
 <body>
     <nav>
-        <img src="work1/лого 1.png" alt="logo">
-        <div>
-            <ul>
-                <li><a href="#section1">Услуги</a></li>
-                <li><a href="#section2">Стоимость</a></li>
-                <li><a href="#section3">Схема работы</a></li>
-            </ul>
-        </div>
-        <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" alt="telegram">
+        <ul class="sidebar">
+            <li onclick=hideSidebar()>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#section1">Услуги</a></li>
+            <li><a href="#section2">Стоимость</a></li>
+            <li><a href="#section3">Схема работы</a></li>
+        </ul>
+        <ul>
+            <li>
+                <h2>ТУТ</h2>
+                <h2>НЕТ</h2>
+                <h2>НДС</h2>
+            </li>
+            <li class="hideOnMobile"><a href="#section1">Услуги</a></li>
+            <li class="hideOnMobile"><a href="#section2">Стоимость</a></li>
+            <li class="hideOnMobile"><a href="#section3">Схема работы</a></li>
+            <li class="menu-button" onclick=showSidebar()>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" width="55px" height="55px" alt="telegram">
+                </a>
+            </li>
+        </ul>
     </nav>
     <div class="div1" id="grid">
         <div>
