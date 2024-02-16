@@ -22,13 +22,24 @@ nav {
     left: 0;
     right: 0;
 }
+nav > img:first-child {
+    width: 75px;
+    height: 75px;
+}
 nav > div {
     text-align: center;
     margin-top: -7%;
     padding: 50px 0 50px 0;
     cursor: pointer;
 }
-nav > div > pre > a {
+nav > div > ul {
+    list-style: none;
+}
+nav > div > ul > li {
+    display: inline-block;
+    margin: 0 35px;
+}
+nav > div > ul > li > a {
     color: black;
     text-decoration: none;
 }
@@ -36,6 +47,8 @@ nav > img:last-child {
     cursor: pointer;
     float: right;
     margin-top: -6%;
+    width: 55px;
+    height: 55px;
 }
 .div1 {
     width: 100%;
@@ -92,12 +105,12 @@ nav > img:last-child {
 .div2 > div > p {
     font-size: large;
 }
-.div2 > div:first-child > p {
-    margin: 0 200px 0px 0px;
-}
 .div2 > div:first-child {
     background-color: rgba(41, 120, 83, 0.98);
     color: white;
+}
+.div2 > div:first-child > p {
+    margin: 0 200px 0px 0px;
 }
 .div2 > div:first-child > button {
     width: 200px;
@@ -113,6 +126,8 @@ nav > img:last-child {
     margin-right: -10px;
     margin-top: -250px;
     float: right;
+    width: 250px;
+    height: 300px;
 }
 .div2 > div:last-child {
     background-color: rgba(230, 230, 230, 0.5);
@@ -181,6 +196,9 @@ nav > img:last-child {
     padding: 30px 0 0 30px;
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     grid-template-rows: 1fr 2fr;
+}
+.grid1 > div:first-child > div > img {
+    width: 80px;
 }
 .grid1 > div > div {
     grid-template-columns: 2fr 1fr;
@@ -316,7 +334,6 @@ nav > img:last-child {
     font-size: larger;
 }
 .slide > form > label > input[type="text"] {
-    /* display: none; */
     margin-left: 60px;
     width: 70%;
     height: 50px;
@@ -389,6 +406,10 @@ nav > img:last-child {
 .grid2 > div > p {
     font-size: medium;
     font-weight: 600;
+}
+.grid2 > div > img {
+    width: 140px;
+    height: 140px;
 }
 .main-form {
     display: grid;
@@ -542,22 +563,25 @@ footer > u {
     font-size: medium;
     font-weight: 500;
 }
-@media only screen and (max-width: 1200px) {
-    /* Your styles for screens up to 1200px width */
-}
+@media (max-width: 1200px) {
+    nav > img:last-child {
+        margin-top: -6%;
+        margin-right: 23%;
+        float: right;
+    }
+    /* .div1 {
 
-@media only screen and (max-width: 992px) {
+    } */
+}
+@media (min-width: 992px) {
     /* Your styles for screens up to 992px width */
 }
-
-@media only screen and (max-width: 768px) {
+@media (min-width: 768px) {
     /* Your styles for screens up to 768px width */
 }
-
-@media only screen and (max-width: 576px) {
-    /* Your styles for screens up to 576px width */
+@media (min-width: 480px) {
+    /* Your styles for screens up to 480px width */
 }
-
-@media only screen and (max-width: 480px) {
+@media (min-width: 320px) {
     /* Your styles for screens up to 480px width */
 }
