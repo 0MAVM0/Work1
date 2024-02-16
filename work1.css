@@ -12,9 +12,10 @@ button {
     display: grid;
 }
 nav {
+    z-index: 10;
     background-color: rgb(230, 230, 230);
     width: 100%;
-    height: 100px;
+    height: 80px;
     padding: 15px 40px 15px 40px;
     position: fixed;
     top: 0;
@@ -81,9 +82,9 @@ nav > ul:last-child > li:last-child {
 .div1 {
     width: 100%;
     background-color: rgba(230, 230, 230, 0.5);
-    padding: 50px 150px 50px 150px;
+    padding: 50px 100px 50px 150px;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 .div1 > div:first-child > h1 {
@@ -101,6 +102,9 @@ nav > ul:last-child > li:last-child {
     font-weight: 600;
 }
 .div1 > div:last-child {
+    width: 659px;
+    height: 659px;
+    margin-top: -50px;
     background: url(work1/3_1-removebg-preview.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -215,36 +219,39 @@ nav > ul:last-child > li:last-child {
     width: 100%;
     height: 500px;
     gap: 50px;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     padding: 0 150px 0 150px;
     margin-bottom: 50px;
 }
 .grid1 > div {
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid1 > div > div {
     padding: 30px 0 0 30px;
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     grid-template-rows: 1fr 2fr;
 }
-.grid1 > div:first-child > div > img {
+.grid1 > div > div:first-child > div > img {
     width: 80px;
 }
-.grid1 > div > div {
+.grid1 > div > div > div {
     grid-template-columns: 2fr 1fr;
     gap: 50px;
 }
-.grid1 > div > div > img {
+.grid1 > div > div > div > img {
     width: 90px;
     height: 90px;
     margin-top: -25px;
 }
-.grid1 > div > div > div > hr {
+.grid1 > div > div > div > div > hr {
     width: 90px;
     height: 5px;
     margin-top: 5px;
     border: none;
     background-image: linear-gradient(to right, rgba(41, 120, 83, 0.98), rgba(41, 120, 83, 0.98));
 }
-.grid1 > div > p {
+.grid1 > div > div > p {
     font-size: large;
 }
 .div4 {
@@ -440,6 +447,7 @@ nav > ul:last-child > li:last-child {
     height: 140px;
 }
 .main-form {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
@@ -449,12 +457,15 @@ nav > ul:last-child > li:last-child {
     height: 584px;
 }
 .main-form > div:first-child {
+    width: 584px;
+    height: 584px;
     background: url(work1/2\ 14.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .main-form > div:last-child {
+    width: 100%;
     padding-top: 25px;
 }
 .h1-2 {
@@ -473,7 +484,7 @@ nav > ul:last-child > li:last-child {
     border-bottom: 2px solid lightgray;
 }
 .main-form > div:last-child > form > input:focus {
-    border-bottom: 2px solid darkgray;
+    border-bottom: 3px solid darkgray;
 }
 .main-form > div:last-child > form > button {
     color: white;
@@ -499,7 +510,11 @@ nav > ul:last-child > li:last-child {
 .main-form > div:last-child > p {
     font-weight: 550;
 }
+.main-form > div:last-child > p > a {
+    color: blue;
+}
 .div7 {
+    width: 100%;
     padding: 20px 150px 20px 150px;
     text-align: center;
     align-items: center;
@@ -592,11 +607,94 @@ footer > u {
     font-weight: 500;
 }
 @media (max-width: 1200px) {
-    /* nav > img:last-child {
-        margin-top: -6%;
-        margin-right: 23%;
-        float: right;
-    } */
+    .div1 {
+        padding: 15px 15px 15px 15px;
+    }
+    .div1 > div:last-child {
+        width: 600px;
+        height: 600px;
+    }
+    .div2 {
+        padding: 0 75px 0 75px;
+    }
+    .div3 {
+        width: 87%;
+        height: 370px;
+        padding: 20px 0 0 75px;
+    }
+    .div3 > h1 {
+        font-size: xx-large;
+    }
+    .div3 > p {
+        font-size: large;
+    }
+    .div3 > button {
+        width: 250px;
+        height: 50px;
+    }
+    .div3 > img {
+        border: 15px dotted rgba(128, 128, 128, 0.5);
+        width: 275px;
+        height: 275px;
+        margin-right: 75px;
+    }
+    .grid1 {
+        padding: 0 50px 0 50px;
+    }
+    .div5 {
+        padding: 10px 0 10px 100px;
+    }
+    .div5 > div:first-child > p {
+        font-size: large;
+    }
+    #carousel {
+        padding: 15px 15px 0px 15px;
+    }
+    .slide > label,
+    .slide > p {
+        font-size: large;
+    }
+    .slide > form > label > span {
+        font-size: large;
+    }
+    .slide > form > label > input[type="text"] {
+        width: 60%;
+    }
+    .div5 > div:last-child {
+        width: 586px;
+    }
+    .div6 {
+        padding: 50px 50px 50px 50px;
+    }
+    .main-form > div:first-child {
+        width: 484px;
+        height: 484px;
+        background: url(work1/2\ 14.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main-form > div:last-child {
+        padding-top: 10px;
+    }
+    .h1-2 {
+        font-size: 29px;
+        margin-bottom: 15px;
+    }
+    .main-form > div:last-child > form > input {
+        width: 80%;
+        height: 40px;
+        font-size: large;
+        margin-bottom: 40px;
+    }
+    .main-form > div:last-child > form > button {
+        width: 250px;
+        height: 50px;
+        font-size: medium;
+    }
+    .main-form > div:last-child > p {
+        font-weight: 550;
+    }
 }
 @media (min-width: 992px) {
     /* Your styles for screens up to 992px width */
