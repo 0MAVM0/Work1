@@ -145,6 +145,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     event.preventDefault();
 
     var form = document.getElementById('promo-form');
+    var paragraph = document.getElementById('promo-paragraph');
     var container = document.getElementById('promo-container');
 
     if (!form.checkValidity()) {
@@ -152,6 +153,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     }
 
     form.style.display = 'none';
+    paragraph.style.display = 'none';
     container.style.display = 'block';
 });
 

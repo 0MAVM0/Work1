@@ -220,38 +220,32 @@ nav > ul:last-child > li:last-child {
     height: 500px;
     gap: 50px;
     grid-template-rows: repeat(2, 1fr);
-    padding: 0 150px 0 150px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 125px 0 125px;
     margin-bottom: 50px;
 }
 .grid1 > div {
-    gap: 50px;
-    grid-template-columns: repeat(3, 1fr);
-}
-.grid1 > div > div {
     padding: 30px 0 0 30px;
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     grid-template-rows: 1fr 2fr;
 }
-.grid1 > div > div:first-child > div > img {
-    width: 80px;
-}
-.grid1 > div > div > div {
+.grid1 > div > div {
     grid-template-columns: 2fr 1fr;
     gap: 50px;
 }
-.grid1 > div > div > div > img {
+.grid1 > div > div > img {
     width: 90px;
     height: 90px;
     margin-top: -25px;
 }
-.grid1 > div > div > div > div > hr {
+.grid1 > div > div > div > hr {
     width: 90px;
     height: 5px;
     margin-top: 5px;
     border: none;
     background-image: linear-gradient(to right, rgba(41, 120, 83, 0.98), rgba(41, 120, 83, 0.98));
 }
-.grid1 > div > div > p {
+.grid1 > div > p {
     font-size: large;
 }
 .div4 {
@@ -281,7 +275,6 @@ nav > ul:last-child > li:last-child {
     font-size: x-large;
 }
 .div4 > p {
-    font-size: x-large;
     padding: 25px 0 25px 0;
 }
 .div4 > b > u {
@@ -448,13 +441,8 @@ nav > ul:last-child > li:last-child {
 }
 .main-form {
     width: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-}
-.main-form > div {
-    width: 584px;
-    height: 584px;
 }
 .main-form > div:first-child {
     width: 584px;
@@ -516,7 +504,6 @@ nav > ul:last-child > li:last-child {
 .div7 {
     width: 100%;
     padding: 20px 150px 20px 150px;
-    text-align: center;
     align-items: center;
 }
 .div7 > hr {
@@ -610,9 +597,15 @@ footer > u {
     .div1 {
         padding: 15px 15px 15px 15px;
     }
+    .div1 > div:first-child > h1 {
+        font-size: 44px;
+    }
     .div1 > div:last-child {
         width: 600px;
         height: 600px;
+    }
+    .h1-1 {
+        font-size: 49px;
     }
     .div2 {
         padding: 0 75px 0 75px;
@@ -640,6 +633,7 @@ footer > u {
     }
     .grid1 {
         padding: 0 50px 0 50px;
+        margin-bottom: 130px;
     }
     .div5 {
         padding: 10px 0 10px 100px;
@@ -669,10 +663,6 @@ footer > u {
     .main-form > div:first-child {
         width: 484px;
         height: 484px;
-        background: url(work1/2\ 14.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
     .main-form > div:last-child {
         padding-top: 10px;
@@ -693,22 +683,228 @@ footer > u {
         font-size: medium;
     }
     .main-form > div:last-child > p {
-        font-weight: 550;
+        font-size: small;
+    }
+    .div7 > details {
+        font-size: large;
+    }
+    .div7 > details > p {
+        font-size: small;
+    }
+    .div8 > hr {
+        bottom: -21%;
     }
 }
-@media (min-width: 992px) {
-    /* Your styles for screens up to 992px width */
+@media (max-width: 992px) {
+    .div1 > div:first-child > h1 {
+        font-size: 34px;
+    }
+    .div1 > div:first-child > button {
+        width: 275px;
+        height: 50px;
+        font-size: large;
+    }
+    .div1 > div:first-child > p,
+    .div1 > div:first-child > label {
+        font-size: small;
+    }
+    .div1 > div:last-child {
+        width: 550px;
+        height: 550px;
+    }
+    .h1-1 {
+        font-size: 44px;
+    }
+    .div2 {
+        padding: 0 50px 0 50px;
+    }
+    .div2 > div {
+        height: 330px;
+        padding: 25px 10px 10px 45px;
+    }
+    .div2 > div > h1 {
+        font-size: x-large;
+    }
+    .div2 > div > p {
+        font-size: medium;
+    }
+    .div2 > div:first-child > button {
+        width: 175px;
+        height: 50px;
+        font-size: large;
+    }
+    .div2 > div:first-child > img {
+        width: 225px;
+        height: 275px;
+    }
+    .div2 > div:last-child > button {
+        width: 175px;
+        height: 50px;
+        font-size: large;
+    }
+    .div3 {
+        width: 89%;
+        height: 340px;
+        padding: 10px 0 0 50px;
+    }
+    .div3 > h1 {
+        font-size: x-large;
+    }
+    .div3 > p {
+        font-size: medium;
+    }
+    .div3 > button {
+        width: 225px;
+        height: 50px;
+        font-size: large;
+    }
+    .grid1 {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 50px 0 50px;
+        margin-bottom: 360px;
+    }
+    .div4 {
+        height: 600px;
+    }
+    .div4 > img:first-child,
+    .div4 > img:last-child {
+        width: 150px;
+        height: 150px;
+    }
+    .div4 > hr, .div6 > hr {
+        width: 400px;
+    }
+    .div4 > p, b {
+        font-size: large;
+    }
+    .div4 > img:last-child {
+        width: 150px;
+        height: 150px;
+    }
+    .div5 {
+        height: 520px;
+        padding: 10px 0 10px 50px;
+    }
+    .div5 > div:first-child > .h1-2 {
+        font-size: 24px;
+    }
+    .div5 > div:first-child > hr {
+        width: 175px;
+        height: 4px;
+    }
+    .div5 > div:first-child > p {
+        font-size: large;
+    }
+    #carousel {
+        width: 90%;
+        height: 250px;
+        border-radius: 25px;
+        padding: 25px 25px 10px 25px;
+        background-color: yellow;
+    }
+    .slide > label,
+    .slide > p {
+        font-size: large;
+    }
+    .slide > input {
+        font-size: large;
+    }
+    .slide > input::placeholder {
+        padding: 15px;
+    }
+    .slide > form > label > span {
+        font-size: large;
+    }
+    .slide > form > label > input[type="text"] {
+        margin-left: 40px;
+        width: 65%;
+        height: 40px;
+    }
+    .slide > form > label > input[type="text"]::placeholder {
+        font-size: large;
+    }
+    .slide:nth-child(5) > p > p {
+        font-size: large;
+    }
+    #controls > button {
+        width: 150px;
+        height: 40px;
+        font-size: small;
+    }
+    .indicator {
+        width: 50px;
+        height: 3px;
+        background-color: #ccc;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .div5 > div:last-child {
+        width: 500px;
+        height: 500px;
+    }
+    .div6 {
+        padding: 50px 40px 50px 40px;
+    }
+    .grid2 > div > p {
+        font-size: small;
+    }
+    .grid2 > div > img {
+        width: 100px;
+        height: 100px;
+    }
+    .main-form > div:first-child {
+        width: 424px;
+        height: 424px;
+    }
+    .main-form > div:last-child {
+        padding-top: 10px;
+    }
+    .h1-2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .main-form > div:last-child > form > input {
+        width: 80%;
+        height: 40px;
+        font-size: medium;
+    }
+    .main-form > div:last-child > form > button {
+        width: 225px;
+        height: 55px;
+        font-size: large;
+    }
+    .main-form > div:last-child > #promo-container {
+        height: 50px;
+        padding: 15px 0 15px 0;
+        font-size: medium;
+    }
+    .main-form > div:last-child > p {
+        font-size: x-small;
+    }
+    .div7 > details {
+        font-size: medium;
+    }
+    .div7 > details > p {
+        font-size: smaller;
+    }
+    .div8 {
+        height: 350px;
+    }
+    .div8 > .h1-1 {
+        font-size: 39px;
+    }
+    .div8 > button {
+        width: 275px;
+        height: 50px;
+        font-size: large;
+    }
+    .div8 > hr {
+        width: 65%;
+        bottom: -19%;
+    }
 }
-@media (min-width: 768px) {
-    /* Your styles for screens up to 768px width */
-}
-@media (min-width: 480px) {
-    /* Your styles for screens up to 480px width */
-}
-@media (min-width: 320px) {
-    /* Your styles for screens up to 480px width */
-}
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .hideOnMobile {
         display: none;
     }
@@ -716,7 +912,7 @@ footer > u {
         display: block;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .sidebar {
         width: 100%;
     }
