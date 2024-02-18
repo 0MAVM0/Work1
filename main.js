@@ -147,9 +147,18 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     var form = document.getElementById('promo-form');
     var paragraph = document.getElementById('promo-paragraph');
     var container = document.getElementById('promo-container');
+    var emailInput = document.getElementById('email');
+    var phoneInput = document.getElementById('phone');
 
     if (!form.checkValidity()) {
-      return;
+        if (!emailInput.checkValidity()) {
+            emailInput.style.borderColor = 'red';
+        }
+        var phoneRegex = /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
+        if (!phoneRegex.test(phoneInput.value)) {
+            phoneInput.style.borderColor = 'red';
+        }
+        return;
     }
 
     form.style.display = 'none';
