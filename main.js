@@ -182,7 +182,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
         phone: document.getElementById('phone').value
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    emailjs.send('service_zyy1i9r', 'template_91epezm', formData)
         .then(function(response) {
             console.log('Письмо успешно отправлено!', response.status, response.text);
         }, function(error) {
