@@ -1298,7 +1298,6 @@ footer > u {
         width: 50px;
         height: 50px;
     }
-    /* ========================================================================= */
     .main-form {
         gap: 25px;
     }
@@ -1348,5 +1347,260 @@ footer > u {
     .div8 > hr {
         width: 60%;
         bottom: -21%;
+    }
+}
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+    }
+    nav {
+        height: 60px;
+        padding: 10px 20px 10px 20px;
+    }
+    nav > ul:last-child > li:first-child > h2 {
+        font-size: medium;
+        margin: -8px;
+    }
+    nav > ul:last-child > li:last-child > a > img {
+        width: 35px;
+        height: 35px;
+    }
+    .div1 {
+        margin-top: 60px;
+    }
+    .div1 > div:first-child > h1 {
+        font-size: 14px;
+    }
+    .div1 > div:first-child > input[type="radio"] {
+        width: 10px;
+        height: 10px;
+    }
+    .div1 > div:first-child > input[type="radio"]::before {
+        width: 5px;
+        height: 5px;
+    }
+    .div1 > div:first-child > button {
+        width: 150px;
+        height: 25px;
+        font-size: smaller;
+        margin-top: 0;
+    }
+    .div1 > div:first-child > p,
+    .div1 > div:first-child > label {
+        font-size: xx-small;
+    }
+    .div1 > div:last-child {
+        width: 200px;
+        height: 200px;
+        margin-top: 0px;
+    }
+    .h1-1 {
+        font-size: 24px;
+    }
+    .div2 {
+        margin-bottom: 20px;
+        padding: 10px;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .div2 > div {
+        height: 230px;
+        padding: 15px 0 0 25px;
+    }
+    .div2 > div:first-child {
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .div2 > div > h1 {
+        font-size: small;
+    }
+    .div2 > div > p {
+        font-size: x-small;
+    }
+    .div2 > div:first-child > p {
+        margin: 0 120px 0 0;
+    }
+    .div2 > div:last-child {
+        margin: 0 125px;
+        width: 50%;
+        height: 225px;
+    }
+    .div2 > div:first-child > button,
+    .div2 > div:last-child > button {
+        width: 100px;
+        height: 30px;
+        font-size: x-small;
+    }
+    .div2 > div:first-child > img {
+        width: 150px;
+        height: 175px;
+        margin-top: -40%;
+        margin-right: -20px;
+    }
+    .div3 {
+        width: 93%;
+        height: 225px;
+        padding: 20px 0 0 20px;
+    }
+    .div3 > h1 {
+        font-size: small;
+    }
+    .div3 > p {
+        font-size: x-small;
+        padding: 0;
+        margin: 0 200px 0 0;
+    }
+    .div3 > button {
+        width: 100px;
+        height: 30px;
+        font-size: smaller;
+    }
+    .div3 > img {
+        border: 5px dotted rgba(128, 128, 128, 0.5);
+        width: 150px;
+        height: 150px;
+        margin-top: -150px;
+        margin-right: 20px;
+    }
+    #p1-1 {
+        font-size: smaller;
+    }
+    .grid1 {
+        padding: 0 25px 0 25px;
+        margin-bottom: 1100px;
+    }
+    .grid1 > div {
+        padding: 15px 0 0 15px;
+    }
+    .grid1 > div > div {
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+    }
+    .grid1 > div > div > img {
+        width: 70px;
+        height: 70px;
+        margin-top: -15px;
+    }
+    .grid1 > div > div > div > hr {
+        width: 70px;
+        height: 5px;
+    }
+    .grid1 > div > p {
+        font-size: medium;
+    }
+    .div4 {
+        height: 600px;
+    }
+    .div4 > img:first-child,
+    .div4 > img:last-child {
+        width: 1px;
+        height: 1px;
+    }
+    .h1-1 {
+        font-size: 29px;
+    }
+    .div4 {
+        height: 800px;
+    }
+    .div4 > img:first-child,
+    .div4 > img:last-child {
+        width: 75px;
+        height: 75px;
+    }
+    .h1-1 {
+        font-size: 19px;
+    }
+    .div4 > hr, .div6 > hr {
+        width: 150px;
+    }
+    .div4 > p, b,
+    .div5 > div:first-child > p,
+    .slide > label,
+    .slide > p,
+    .slide > input,
+    .slide > form > label > span,
+    .slide > form > label > input[type="text"]::placeholder,
+    .slide:nth-child(5) > p > p {
+        font-size: smaller;
+    }
+    .div5 {
+        gap: 25px;
+        height: 350px;
+        padding: 10px 0 10px 25px;
+    }
+    .div5 > div:first-child {
+        padding: 0;
+    }
+    .div5 > div:first-child > .h1-2 {
+        font-size: 9px;
+    }
+    .div5 > div:first-child > p {
+        font-size: xx-small;
+    }
+    .div5 > div:first-child > hr {
+        width: 75px;
+        height: 4px;
+    }
+    #carousel {
+        position: relative;
+        width: 100%;
+        height: 225px;
+        padding: 25px 0 0 15px;
+    }
+    .slide > input::placeholder {
+        padding: 10px;
+    }
+    .slide > form > label > input[type="text"] {
+        margin-left: 10px;
+        width: 50%;
+    }
+    .slide > form > label > input[type="text"]::placeholder {
+        font-size: x-small;
+    }
+    #controls > button {
+        width: 70px;
+        height: 30px;
+        font-size: xx-small;
+    }
+    .indicator {
+        width: 20px;
+        height: 3px;
+    }
+    .div5 > div:last-child {
+        margin-top: 30px;
+        width: 225px;
+        height: 225px;
+    }
+    .div6 {
+        padding: 50px 10px 50px 10px;
+    }
+    .main-form {
+        gap: 25px;
+    }
+    .main-form > div:first-child {
+        width: 254px;
+        height: 284px;
+    }
+    .main-form > div:last-child {
+        padding-top: 0;
+    }
+    .h1-2 {
+        font-size: 9px;
+    }
+    .main-form > div:last-child > form > input {
+        width: 60%;
+        height: 15px;
+        font-size: xx-small;
+    }
+    .main-form > div:last-child > form > button {
+        width: 150px;
+        height: 25px;
+        font-size: x-small;
+    }
+    .div7 > details {
+        width: 100%;
+    }
+    .div7 > hr {
+        width: 50%;
     }
 }
