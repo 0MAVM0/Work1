@@ -1597,8 +1597,11 @@ footer > u {
         height: 25px;
         font-size: x-small;
     }
+    .div7 {
+        padding: 20px 75px 20px 75px;
+    }
     .div7 > details {
-        width: 100%;
+        width: 80%;
     }
     .div7 > hr {
         width: 50%;
