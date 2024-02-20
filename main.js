@@ -173,6 +173,8 @@ var maskOptions = {
 }
 var mask = new IMask(element, maskOptions);
 
+emailjs.init('puPX_Z8YnEmKEToWM');
+
 document.getElementById('submit-btn').addEventListener('click', function() {
     event.preventDefault();
 
