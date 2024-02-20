@@ -959,7 +959,7 @@ footer > u {
     }
     .div3 > p {
         font-size: large;
-        margin: 0 0px 0px 0px;
+        margin: 0;
     }
     .div3 > button {
         margin-top: 25px;
@@ -1064,6 +1064,13 @@ footer > u {
     .grid2 {
         gap: 0;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .grid2 > div:nth-child(odd) {
+        margin: 0 -75px 0 -40px;
+    }
+    .grid2 > div:nth-child(even) {
+        margin: 0 0 0 -75px;
     }
     .grid2 > div > h1 {
         font-size: x-large;
@@ -1162,6 +1169,165 @@ footer > u {
 @media (max-width: 576px) {
     .sidebar {
         width: 100%;
+    }
+    .div1 {
+        padding: 15px 0 15px 25px;
+    }
+    .h1-1 {
+        font-size: 50px;
+        padding: 0 50px;
+    }
+    .div2 > div:last-child > h1 {
+        font-size: 30px;
+    }
+    .div2 > div:first-child > p {
+        font-size: medium;
+        margin: 0;
+    }
+    .div2 > div:first-child > button,
+    .div2 > div:last-child > button {
+        width: 250px;
+    }
+    .div2 > div:first-child > img {
+        display: none;
+    }
+    .div3 {
+        width: 84%;
+        height: 370px;
+        padding: 25px 0 0 25px;
+    }
+    .div3 > h1 {
+        font-size: x-large;
+    }
+    .div3 > p {
+        font-size: large;
+        margin: 0;
+    }
+    .div3 > button {
+        width: 225px;
+        font-size: large;
+    }
+    .div3 > img {
+        display: none;
+    }
+    #p1-1 {
+        font-size: larger;
+        padding: 0 75px;
+    }
+    .grid1 {
+        height: 1400px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 125px 0 125px;
+    }
+    .grid1 > div {
+        padding: 25px 25px 0 25px;
+    }
+    .div4 {
+        height: 700px;
+        padding: 50px 100px 25px 100px;
+    }
+    .div4 > .h1-1 {
+        font-size: x-large;
+    }
+    .div4 > p, b {
+        font-size: large;
+    }
+    .div5 {
+        height: 500px;
+        padding: 10px 0 10px 75px;
+    }
+    .div5 > div:first-child {
+        padding: 30px 0 0 0;
+    }
+    .div5 > div:first-child > .h1-2 {
+        font-size: x-large;
+    }
+    .div5 > div:first-child > p {
+        padding: 0 150px 0 0;
+        font-size: large;
+    }
+    #carousel {
+        width: 90%;
+    }
+    .div5 > div:last-child {
+        display: none;
+    }
+    .div6 {
+        padding: 25px;
+    }
+    .div6 > h1 {
+        font-size: xx-large;
+    }
+    .grid2 {
+        gap: 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .grid2 > div:nth-child(odd),
+    .grid2 > div:nth-child(even) {
+        margin: 0;
+    }
+    .grid2 > div > h1 {
+        font-size: large;
+    }
+    .grid2 > div > h2 {
+        font-size: large;
+    }
+    .grid2 > div > p {
+        padding: 0 100px;
+        font-size: small;
+        font-weight: 500;
+    }
+    .grid2 > div > img {
+        width: 75px;
+        height: 75px;
+    }
+    .main-form > div:first-child {
+        width: 384px;
+        height: 384px;
+    }
+    .h1-2 {
+        font-size: 24px;
+    }
+    .main-form > div:last-child > form > input {
+        font-size: large;
+    }
+    .main-form > div:last-child > form > button {
+        width: 275px;
+    }
+    .main-form > div:last-child > #promo-container {
+        font-size: large;
+    }
+    .main-form > div:last-child > p {
+        font-size: x-small;
+    }
+    .div7 > .h1-1 {
+        font-size: x-large;
+        padding: 0;
+    }
+    .div7 > hr {
+        width: 350px;
+    }
+    .div7 > details {
+        font-size: medium;
+    }
+    .div7 > details > summary::after {
+        font-size: larger;
+    }
+    .div7 > details > p {
+        font-size: smaller;
+    }
+    .div8 > .h1-1 {
+        font-size: xx-large;
+    }
+    .div8 > button {
+        width: 275px;
+        height: 50px;
+        font-size: large;
+    }
+    .div8 > hr {
+        bottom: -32%;
     }
 }
 @media (max-width: 480px) {
