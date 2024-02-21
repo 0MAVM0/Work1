@@ -1334,6 +1334,99 @@ footer > u {
     .sidebar {
         width: 100%;
     }
+    .div1 {
+        padding: 15px 10px;
+    }
+    .div1 > div:first-child > h1 {
+        font-size: xx-large;
+    }
+    .div1 > div:first-child > button {
+        width: 250px;
+    }
+    .div2 > div:last-child > h1 {
+        font-size: 24px;
+    }
+    .div2 > div:first-child > button,
+    .div2 > div:last-child > button {
+        width: 225px;
+    }
+    .div3 {
+        width: 81%;
+    }
+    .div3 > h1 {
+        font-size: large;
+    }
+    .div3 > p {
+        font-size: medium;
+    }
+    #p1-1 {
+        padding: 0 50px;
+    }
+    .grid1 {
+        height: 1200px;
+        padding: 0 50px;
+        gap: 25px;
+    }
+    .div4 {
+        height: 600px;
+        padding: 50px 75px 25px 75px;
+    }
+    .div4 > .h1-1 {
+        margin-top: -50px;
+        font-size: x-large;
+    }
+    .div4 > hr {
+        width: 40%;
+    }
+    .div4 > p, b {
+        font-size: medium;
+    }
+    .div4 > img:first-child,
+    .div4 > img:last-child {
+        width: 100px;
+        height: 100px;
+    }
+    .div5 {
+        padding: 10px 0 10px 50px;
+    }
+    .div5 > div:first-child > p {
+        padding: 0 100px 0 0;
+    }
+    .div6 > h1 {
+        padding: 0;
+    }
+    .main-form > div:first-child {
+        width: 334px;
+        height: 334px;
+    }
+    .h1-2 {
+        font-size: 19px;
+    }
+    .main-form > div:last-child > form > input,
+    .main-form > div:last-child > #promo-container {
+        font-size: medium;
+    }
+    .main-form > div:last-child > form > button {
+        width: 100%;
+    }
+    .div7 > details {
+        font-size: small;
+    }
+    .div7 > details > summary::after {
+        font-size: larger;
+    }
+    .div8 > .h1-1 {
+        font-size: x-large;
+    }
+    .div8 > button {
+        width: 275px;
+        height: 50px;
+        font-size: large;
+    }
+    .div8 > hr {
+        width: 80%;
+        bottom: -38%;
+    }
 }
 @media (max-width: 390px) {
     .sidebar {
