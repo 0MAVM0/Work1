@@ -54,7 +54,7 @@ nav > ul > li:first-child > h2 {
 nav > ul:last-child > li:last-child {
     margin-left: auto;
 }
-nav > ul:last-child > li:last-child > a > img {
+nav > ul > li:last-child > a > img {
     width: 125px;
     height: 55px;
 }
@@ -80,8 +80,14 @@ nav > ul:last-child > li:last-child > a > img {
 .sidebar > ul > li > a {
     width: 100%;
 }
+.sidebar > ul > li:last-child > a > img {
+    width: 125px; /* изменено */
+    height: 55px; /* изменено */
+    max-width: 100%; /* добавлено */
+    max-height: 100%; /* добавлено */
+}
 .menu-button {
-    display: none;
+    display: block;
 }
 .div1 {
     width: 100%;
@@ -921,6 +927,9 @@ footer > u {
     }
     .menu-button {
         display: block;
+    }
+    nav > ul > li:last-child > a > img {
+        display: none;
     }
     .div1 {
         padding: 15px 0 15px 100px;
