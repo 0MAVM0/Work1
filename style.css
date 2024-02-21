@@ -646,7 +646,7 @@ footer > u {
 }
 @media (max-width: 1200px) {
     .sidebar {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgb(255, 255, 255);
     }
     .div1 {
         padding: 15px 15px 15px 15px;
@@ -1455,7 +1455,49 @@ footer > u {
         bottom: -38%;
     }
 }
-@media (max-width: 390px) {
+@media (max-width: 431px) {
+    nav > ul:last-child > li:first-child > h2 {
+        margin: -10px;
+        font-size: larger;
+    }
+    nav > ul:last-child > li:first-child > h2:first-child {
+        margin-top: 0;
+    }
+    .div1 {
+        padding: 15px 50px;
+    }
+    .div1 > div:first-child > h1 {
+        font-size: large;
+    }
+    .h1-1 {
+        font-size: x-large;
+        padding: 0;
+    }
+    .div2 > div:first-child {
+        height: 370px;
+    }
+    .div2 > div:first-child > h1,
+    .div2 > div:last-child > h1 {
+        font-size: 20px;
+    }
+    .div2 > div:last-child > p {
+        font-size: large;
+    }
+    .div3 {
+        height: 370px;
+        padding-bottom: 10px;
+    }
+    .grid1 {
+        padding: 0 25px;
+    }
+    .div4 {
+        height: 635px;
+    }
+    .div4 > .h1-1 {
+        font-size: medium;
+    }
+}
+@media (max-width: 391px) {
     .div1 {
         padding: 15px 50px;
     }
