@@ -423,10 +423,10 @@ nav > ul > li:last-child > a > img {
     font-size: medium;
     font-weight: 400;
 }
-#prevBtn {
+#controls > button:first-child {
     background-color: rgba(255, 0, 0, 0.8);
 }
-#nextBtn {
+#controls > button:last-child {
     background-color: rgba(0, 0, 0, 0.8);
 }
 #indicators {

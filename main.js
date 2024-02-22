@@ -45,20 +45,23 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateButtons(index) {
         if (index === 0) {
             prevBtn.style.display = 'none';
+            prevBtn.id = 'prevBtn';
         } else {
             prevBtn.style.display = 'inline-block';
         }
         if (index < 4) {
             prevBtn.textContent = 'Назад';
+            prevBtn.id = 'prevBtn';
             nextBtn.textContent = 'Далее';
         } else {
             prevBtn.textContent = 'Оставить заявку';
+            prevBtn.id = 'popupBtn';
             nextBtn.textContent = 'Посчитать заново';
         }
     }
 
     prevBtn.addEventListener('click', function () {
-        if (currentSlide > 0) {
+        if (currentSlide < 4) {
             currentSlide--;
             showSlide(currentSlide);
         } else if (currentSlide === 0) {
@@ -110,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resultParagraph.innerHTML = `<p>Сумма НДС: <span>${vatSize.toFixed(2)} руб.</span></p>
                                 <p>Стоимость услуг: <span>${serviceFee.toFixed(2)} руб.</span></p>
                                 <p>Скидка: <span>${(discount * 100).toFixed(2)}%</span></p>
-                                <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</p></span>`;
+                                <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</span></p>`;
     }
 
 
@@ -139,6 +142,21 @@ document.addEventListener('DOMContentLoaded', function () {
     promoRadioNo.addEventListener('change', togglePromoInputVisibility);
 
     togglePromoInputVisibility();
+
+    const popupBtn = document.getElementById('popupBtn');
+    const popupWrapper = document.getElementById('popupWrapper');
+
+    popupBtn.addEventListener('click', function() {
+        popupWrapper.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+
+    popupWrapper.addEventListener('click', function(event) {
+        if (event.target === popupWrapper) {
+            popupWrapper.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 });
 
 document.getElementById('submit-btn').addEventListener('click', function(event) {
@@ -184,27 +202,12 @@ document.getElementById('submit-btn').addEventListener('click', function() {
         phone: document.getElementById('phone').value
     };
 
-    emailjs.send('service_7woa58j', 'template_y38apfz', formData)
+    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', formData)
         .then(function(response) {
             console.log('Письмо успешно отправлено!', response.status, response.text);
         }, function(error) {
             console.log('Письмо не удалось отправить!', error);
         });
-});
-
-const popupBtn = document.getElementById('popupBtn');
-const popupWrapper = document.getElementById('popupWrapper');
-
-popupBtn.addEventListener('click', function() {
-    popupWrapper.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-});
-
-popupWrapper.addEventListener('click', function(event) {
-    if (event.target === popupWrapper) {
-        popupWrapper.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
 });
 
 var element2 = document.getElementById('phone2');
