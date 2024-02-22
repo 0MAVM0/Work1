@@ -184,7 +184,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
         phone: document.getElementById('phone').value
     };
 
-    emailjs.send('service_zyy1i9r', 'template_91epezm', formData)
+    emailjs.send('service_7woa58j', 'template_y38apfz', formData)
         .then(function(response) {
             console.log('Письмо успешно отправлено!', response.status, response.text);
         }, function(error) {
@@ -206,3 +206,6 @@ popupWrapper.addEventListener('click', function(event) {
         document.body.style.overflow = 'auto';
     }
 });
+
+var element2 = document.getElementById('phone2');
+var mask = new IMask(element2, maskOptions);
