@@ -211,4 +211,4 @@ document.getElementById('submit-btn').addEventListener('click', function() {
 });
 
 var element2 = document.getElementById('phone2');
-var mask = new IMask(element2, maskOptions);
+var mask2 = new IMask(element2, maskOptions);
