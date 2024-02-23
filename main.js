@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevBtn.id = 'prevBtn';
             nextBtn.textContent = 'Далее';
         } else {
-            prevBtn.textContent = 'Оставить заявку';
+            prevBtn.innerHTML = `<a href="#popupHr">Оставить заявку</a>`;
             prevBtn.id = 'popupBtn';
             nextBtn.textContent = 'Посчитать заново';
         }
@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <p>Скидка: <span>${(discount * 100).toFixed(2)}%</span></p>
                                 <p>Итоговая сумма: <span>${totalAmount.toFixed(2)} руб.</span></p>`;
     }
-
 
     showSlide(currentSlide);
 
