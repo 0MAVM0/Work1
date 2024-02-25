@@ -47,10 +47,9 @@ nav > ul > li:first-child {
     font-family: sans-serif;
     margin-right: auto;
 }
-nav > ul > li:first-child > h2 {
-    font-weight: 800;
-    margin: -14px;
-}
+/* nav > ul > li:first-child > img {
+
+} */
 nav > ul:last-child > li:last-child {
     margin-left: auto;
 }
@@ -685,7 +684,7 @@ footer > u {
 }
 @media (max-width: 1200px) {
     .sidebar {
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.5);
     }
     .div1 {
         padding: 15px 15px 15px 15px;
@@ -1363,7 +1362,7 @@ footer > u {
         margin: 0;
     }
     .grid2 > div > h1 {
-        font-size: large;
+        font-size: larger;
     }
     .grid2 > div > h2 {
         font-size: large;
@@ -1531,12 +1530,8 @@ footer > u {
     }
 }
 @media (max-width: 431px) {
-    nav > ul:last-child > li:first-child > h2 {
-        margin: -10px;
-        font-size: larger;
-    }
-    nav > ul:last-child > li:first-child > h2:first-child {
-        margin-top: 0;
+    .menu-button {
+        margin-right: -15px;
     }
     .div1 {
         padding: 15px 50px;
@@ -1570,6 +1565,12 @@ footer > u {
     }
     .div4 > .h1-1 {
         font-size: medium;
+    }
+    #controls > button {
+        width: 140px;
+    }
+    .grid2 > div:nth-child(even) {
+        margin-top: -50px;
     }
 }
 @media (max-width: 391px) {
@@ -1682,8 +1683,8 @@ footer > u {
         width: 70%;
     }
     #controls > button {
-        width: 100px;
-        font-size: x-small;
+        width: 125px;
+        font-size: smaller;
     }
     .div6 > h1 {
         font-size: x-large;
