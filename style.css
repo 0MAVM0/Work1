@@ -47,9 +47,6 @@ nav > ul > li:first-child {
     font-family: sans-serif;
     margin-right: auto;
 }
-/* nav > ul > li:first-child > img {
-
-} */
 nav > ul:last-child > li:last-child {
     margin-left: auto;
 }
@@ -85,6 +82,17 @@ nav > ul > li:last-child > a > img {
 }
 .menu-button {
     display: none;
+}
+#scrollToTopBtn {
+    position: fixed;
+    right: 40px;
+    bottom: -70px;
+    width: 70px;
+    height: 70px;
+    background: url(images/backToTop-removebg-preview.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: bottom 0.3s ease-in-out;
 }
 .div1 {
     width: 100%;
@@ -684,7 +692,7 @@ footer > u {
 }
 @media (max-width: 1200px) {
     .sidebar {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgb(255, 255, 255);
     }
     .div1 {
         padding: 15px 15px 15px 15px;
@@ -1266,6 +1274,19 @@ footer > u {
     .div1 {
         padding: 15px 0 15px 25px;
     }
+    .div1 > div:first-child > input[type="radio"] {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+    .div1 > div:first-child > input[type="radio"]::before {
+        width: 12.5px;
+        height: 12.5px;
+    }
+    .div1 > div:first-child > label {
+        position: absolute;
+        left: 9%;
+    }
     .h1-1 {
         font-size: 50px;
         padding: 0 50px;
@@ -1531,13 +1552,25 @@ footer > u {
 }
 @media (max-width: 431px) {
     .menu-button {
-        margin-right: -15px;
+        margin-right: -25px;
     }
     .div1 {
         padding: 15px 50px;
     }
     .div1 > div:first-child > h1 {
         font-size: large;
+    }
+    .div1 > div:first-child > input[type="radio"] {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 20px;
+    }
+    .div1 > div:first-child > input[type="radio"]::before {
+        width: 7.5px;
+        height: 7.5px;
+    }
+    .div1 > div:first-child > label {
+        left: 19%;
     }
     .h1-1 {
         font-size: x-large;
@@ -1554,14 +1587,14 @@ footer > u {
         font-size: large;
     }
     .div3 {
-        height: 370px;
+        height: 390px;
         padding-bottom: 10px;
     }
     .grid1 {
         padding: 0 25px;
     }
     .div4 {
-        height: 635px;
+        height: 650px;
     }
     .div4 > .h1-1 {
         font-size: medium;
@@ -1613,6 +1646,7 @@ footer > u {
         width: 225px;
     }
     .div3 {
+        height: 370px;
         width: 76%;
     }
     .div3 > h1 {
@@ -1643,7 +1677,7 @@ footer > u {
         font-size: medium;
     }
     .div4 {
-        height: 550px;
+        height: 575px;
     }
     .div4 > .h1-1 {
         font-size: medium;
