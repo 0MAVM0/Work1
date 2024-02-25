@@ -8,6 +8,12 @@ function hideSidebar() {
     sidebar.style.display = 'none';
 }
 
+document.querySelectorAll('.sidebar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hideSidebar();
+    });
+});
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
