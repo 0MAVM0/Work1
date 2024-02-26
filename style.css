@@ -1482,9 +1482,13 @@ footer > u {
         padding: 0 50px;
     }
     .grid1 {
-        height: 1200px;
+        height: 1125px;
         padding: 0 50px;
         gap: 25px;
+    }
+    .grid1 > div:nth-child(2),
+    .grid1 > div:nth-child(5) {
+        height: 175px;
     }
     .div4 {
         height: 600px;
@@ -1507,6 +1511,7 @@ footer > u {
     }
     .div5 {
         padding: 10px 0 10px 50px;
+        margin-bottom: 50px;
     }
     .div5 > div:first-child > p {
         padding: 0 100px 0 0;
@@ -1563,7 +1568,7 @@ footer > u {
     .div1 > div:first-child > input[type="radio"] {
         width: 15px;
         height: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
     .div1 > div:first-child > input[type="radio"]::before {
         width: 7.5px;
@@ -1602,8 +1607,11 @@ footer > u {
     #controls > button {
         width: 140px;
     }
-    .grid2 > div:nth-child(even) {
+    .grid2 > div:nth-child(2) {
         margin-top: -50px;
+    }
+    .grid2 > div:nth-child(4) {
+        margin-top: -10px;
     }
 }
 @media (max-width: 391px) {
@@ -1616,6 +1624,9 @@ footer > u {
     .div1 > div:first-child > p,
     .div1 > div:first-child > label {
         font-size: smaller;
+    }
+    .div1 > div:first-child > label {
+        padding: 0 50px 0 0;
     }
     .div1 > div:first-child > button {
         font-size: medium;
@@ -1721,10 +1732,10 @@ footer > u {
         font-size: smaller;
     }
     .div6 > h1 {
-        font-size: x-large;
+        font-size: larger;
     }
     .div6 > hr {
-        width: 70%;
+        width: 50%;
     }
     .main-form > div:first-child {
         width: 284px;
@@ -1753,6 +1764,6 @@ footer > u {
         font-size: xx-large;
     }
     .div8 > hr {
-        bottom: -22%;
+        bottom: -21%;
     }
 }
