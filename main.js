@@ -14,29 +14,6 @@ document.querySelectorAll('.sidebar a').forEach(item => {
     });
 });
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.bottom = "40px";
-    } else {
-        scrollToTopBtn.style.bottom = "700px";
-    }
-}
-
-document.getElementById("scrollToTopBtn").onclick = function() {
-    scrollToTop();
-};
-
-function scrollToTop() {
-    var position = document.documentElement.scrollTop || document.body.scrollTop;
-    if (position) {
-        window.requestAnimationFrame(scrollToTop);
-        window.scrollTo(0, position - position / 8);
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
@@ -240,3 +217,26 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
 
 var element2 = document.getElementById('phone2');
 var mask2 = new IMask(element2, maskOptions);
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.bottom = "40px";
+    } else {
+        scrollToTopBtn.style.bottom = "700px";
+    }
+}
+
+document.getElementById("scrollToTopBtn").onclick = function() {
+    scrollToTop();
+};
+
+function scrollToTop() {
+    var position = document.documentElement.scrollTop || document.body.scrollTop;
+    if (position) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, position - position / 8);
+    }
+}

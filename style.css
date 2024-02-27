@@ -83,17 +83,6 @@ nav > ul > li:last-child > a > img {
 .menu-button {
     display: none;
 }
-#scrollToTopBtn {
-    position: fixed;
-    right: 40px;
-    bottom: -70px;
-    width: 70px;
-    height: 70px;
-    background: url(images/backToTop-removebg-preview.png) no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    transition: bottom 0.3s ease-in-out;
-}
 .div1 {
     width: 100%;
     background-color: rgba(230, 230, 230, 0.5);
@@ -689,6 +678,17 @@ footer > h3 {
 footer > u {
     font-size: medium;
     font-weight: 500;
+}
+#scrollToTopBtn {
+    position: fixed;
+    right: 40px;
+    bottom: -70px;
+    width: 70px;
+    height: 70px;
+    background: url(images/backToTop-removebg-preview.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: bottom 0.3s ease-in-out;
 }
 @media (max-width: 1200px) {
     .sidebar {
