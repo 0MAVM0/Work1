@@ -230,7 +230,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
         phone: document.getElementById('phone').value
     };
 
-    emailjs.send('service_3g6gffm', 'template_r6oyzik', formData)
+    emailjs.send('service_1vasvns', 'template_l1xbt9i', formData)
         .then(function(response) {
             console.log('Письмо успешно отправлено!', response.status, response.text);
         }, function(error) {

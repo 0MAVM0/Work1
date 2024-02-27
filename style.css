@@ -1136,7 +1136,7 @@ footer > u {
     }
     #controls {
         position: absolute;
-        bottom: 40px;
+        bottom: 30px;
     }
     #controls > button {
         width: 175px;
@@ -1363,6 +1363,7 @@ footer > u {
     }
     #carousel {
         width: 90%;
+        padding: 20px 0px 10px 20px;
     }
     .div5 > div:last-child {
         display: none;
@@ -1599,7 +1600,7 @@ footer > u {
         padding: 0 25px;
     }
     .div4 {
-        height: 650px;
+        height: 675px;
     }
     .div4 > .h1-1 {
         font-size: medium;
@@ -1607,11 +1608,23 @@ footer > u {
     #controls > button {
         width: 140px;
     }
+    .div6 > hr {
+        width: 60%;
+    }
     .grid2 > div:nth-child(2) {
         margin-top: -50px;
     }
     .grid2 > div:nth-child(4) {
         margin-top: -10px;
+    }
+    .grid2 > div > p {
+        padding: 0 50px;
+    }
+    .div7 > .h1-1 {
+        padding: 0 50px;
+    }
+    .div7 > hr {
+        width: 60%;
     }
 }
 @media (max-width: 391px) {
@@ -1688,7 +1701,7 @@ footer > u {
         font-size: medium;
     }
     .div4 {
-        height: 575px;
+        height: 600px;
     }
     .div4 > .h1-1 {
         font-size: medium;
