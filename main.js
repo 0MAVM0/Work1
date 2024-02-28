@@ -208,6 +208,14 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     paragraph.style.display = 'none';
     container.parentNode.insertBefore(loader, container);
 
+    if (window.innerWidth <= 480) {
+        window.scrollTo({ top: 5800, behavior: 'smooth' });
+    } else if (window.innerHeight <= 430) {
+        window.scrollTo({ top: 6200, behavior: 'smooth' });
+    } else if (window.innerHeight <= 390) {
+        window.scrollTo({ top: 6600, behavior: 'smooth' });
+    }
+
     setTimeout(function() {
         loader.style.display = 'none';
         container.style.display = 'block';
