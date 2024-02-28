@@ -516,6 +516,7 @@ nav > ul > li:last-child > a > img {
     font-weight: 600;
 }
 .loader {
+    margin: 0 auto;
     animation: rotate 1s infinite;
     height: 50px;
     width: 50px;
@@ -530,14 +531,14 @@ nav > ul > li:last-child > a > img {
   }
 .loader:before {
     animation: ball1 1s infinite;
-    background-color: #7C7ADE;
-    box-shadow: 30px 0 0 #abaac5;
+    background-color: rgba(41, 120, 83, 0.98);
+    box-shadow: 30px 0 0 #066bfd;
     margin-bottom: 10px;
 }
 .loader:after {
     animation: ball2 1s infinite;
-    background-color: #abaac5;
-    box-shadow: 30px 0 0 #7C7ADE;
+    background-color: #066bfd;
+    box-shadow: 30px 0 0 rgba(41, 120, 83, 0.98);
 }
 @keyframes rotate {
     0% {
@@ -555,31 +556,31 @@ nav > ul > li:last-child > a > img {
 }
 @keyframes ball1 {
     0% {
-      box-shadow: 30px 0 0 #abaac5;
+      box-shadow: 30px 0 0 #066bfd;
     }
     50% {
-      box-shadow: 0 0 0 #abaac5;
+      box-shadow: 0 0 0 #066bfd;
       margin-bottom: 0;
       -webkit-transform: translate(15px, 15px);
       -moz-transform: translate(15px, 15px);
     }
     100% {
-      box-shadow: 30px 0 0 #abaac5;
+      box-shadow: 30px 0 0 #066bfd;
       margin-bottom: 10px;
     }
 }
 @keyframes ball2 {
     0% {
-      box-shadow: 30px 0 0 #7C7ADE
+      box-shadow: 30px 0 0 rgba(41, 120, 83, 0.98);
     }
     50% {
-      box-shadow: 0 0 0 #7C7ADE;
+      box-shadow: 0 0 0 rgba(41, 120, 83, 0.98);
       margin-top: -20px;
       -webkit-transform: translate(15px, 15px);
       -moz-transform: translate(15px, 15px);
     }
     100% {
-      box-shadow: 30px 0 0 #7C7ADE;
+      box-shadow: 30px 0 0 rgba(41, 120, 83, 0.98);
       margin-top: 0;
     }
 }
