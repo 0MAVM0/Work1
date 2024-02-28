@@ -60,8 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
             prevBtn.id = 'prevBtn';
             nextBtn.textContent = 'Далее';
         } else {
-            prevBtn.innerHTML = `<a href="#popupHr">Оставить заявку</a>`;
+            prevBtn.textContent = 'Оставить заявку';
             prevBtn.id = 'popupBtn';
+            const popupBtn = document.getElementById('popupBtn');
+            const popupWrapper = document.getElementById('popupWrapper');
+
+            popupBtn.addEventListener('click', function() {
+                popupWrapper.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+
+            popupWrapper.addEventListener('click', function(event) {
+                if (event.target === popupWrapper) {
+                    popupWrapper.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
             nextBtn.textContent = 'Посчитать заново';
         }
     }

@@ -422,10 +422,6 @@ nav > ul > li:last-child > a > img {
 #controls > button:first-child {
     background-color: rgba(255, 0, 0, 0.8);
 }
-#controls > button:first-child > a {
-    color: white;
-    text-decoration: none;
-}
 #controls > button:last-child {
     background-color: rgba(0, 0, 0, 0.8);
 }
