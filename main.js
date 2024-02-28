@@ -184,9 +184,16 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
         return;
     }
 
+    var loader = document.createElement('div');
+    loader.className = 'loader';
     form.style.display = 'none';
     paragraph.style.display = 'none';
-    container.style.display = 'block';
+    container.parentNode.insertBefore(loader, container);
+
+    setTimeout(function() {
+        loader.style.display = 'none';
+        container.style.display = 'block';
+    }, 3000);
 });
 
 var element = document.getElementById('phone');
