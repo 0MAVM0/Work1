@@ -62,12 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             prevBtn.textContent = 'Оставить заявку';
             prevBtn.id = 'popupBtn';
-            const popupBtn = document.getElementById('popupBtn');
+            const popupBtns = document.querySelectorAll('#popupBtn');
             const popupWrapper = document.getElementById('popupWrapper');
 
-            popupBtn.addEventListener('click', function() {
-                popupWrapper.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+            popupBtns.forEach(popupBtn => {
+                popupBtn.addEventListener('click', function() {
+                    popupWrapper.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
             });
 
             popupWrapper.addEventListener('click', function(event) {
@@ -162,12 +164,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     togglePromoInputVisibility();
 
-    const popupBtn = document.getElementById('popupBtn');
+    const popupBtns = document.querySelectorAll('#popupBtn');
     const popupWrapper = document.getElementById('popupWrapper');
 
-    popupBtn.addEventListener('click', function() {
-        popupWrapper.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+    popupBtns.forEach(popupBtn => {
+        popupBtn.addEventListener('click', function() {
+            popupWrapper.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
     });
 
     popupWrapper.addEventListener('click', function(event) {
