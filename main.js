@@ -196,7 +196,20 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'auto';
         }
     });
+});
 
+document.getElementById('submit-btn2').addEventListener('click', function(event) {
+    var formData = {
+        name: document.getElementById('name2').value,
+        phone: document.getElementById('phone2').value
+    };
+
+    emailjs.send('service_1vasvns', 'template_cj6zt15', formData)
+        .then(function(response) {
+            console.log('Письмо успешно отправлено!', response.status, response.text);
+        }, function(error) {
+            console.log('Письмо не удалось отправить!', error);
+        });
 });
 
 document.getElementById('submit-btn').addEventListener('click', function(event) {
