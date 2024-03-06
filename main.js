@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     togglePromoInputVisibility();
 
     const popupBtns = document.querySelectorAll('#popupBtn');
+    const closePopupBtn = document.getElementById('submit-btn2');
     const popupWrapper = document.getElementById('popupWrapper');
 
     popupBtns.forEach(popupBtn => {
@@ -173,6 +174,21 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'hidden';
         });
     });
+    
+    closePopupBtn.addEventListener('click', function() {
+        if (isFormFilled()) {
+            popupWrapper.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        } else {
+            return;
+        }
+    });
+    
+    function isFormFilled() {
+        const promoInputValue = document.getElementById('name2').value.trim();
+        const promoInputValue2 = document.getElementById('phone2').value.trim();
+        return promoInputValue !== '';
+    }    
 
     popupWrapper.addEventListener('click', function(event) {
         if (event.target === popupWrapper) {
@@ -180,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'auto';
         }
     });
+
 });
 
 document.getElementById('submit-btn').addEventListener('click', function(event) {
@@ -220,19 +237,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
         loader.style.display = 'none';
         container.style.display = 'block';
     }, 3000);
-});
 
-var element = document.getElementById('phone');
-var maskOptions = {
-    mask: '+7(000)000-00-00',
-    lazy: false
-}
-var mask = new IMask(element, maskOptions);
-
-emailjs.init('puPX_Z8YnEmKEToWM');
-
-document.getElementById('submit-btn').addEventListener('click', function(event) {
-    event.preventDefault();
 
     var formData = {
         name: document.getElementById('name').value,
@@ -247,6 +252,13 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
             console.log('Письмо не удалось отправить!', error);
         });
 });
+
+var element = document.getElementById('phone');
+var maskOptions = {
+    mask: '+7(000)000-00-00',
+    lazy: false
+}
+var mask = new IMask(element, maskOptions);
 
 var element2 = document.getElementById('phone2');
 var mask2 = new IMask(element2, maskOptions);
